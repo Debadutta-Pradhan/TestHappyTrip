@@ -17,18 +17,18 @@ pipeline {
                 }
             
                   // Build The Project              
-                        stage('Clone Source') {
+         stage('Clone Source') {
                           steps {
                              git 'https://github.com/Debadutta-Pradhan/TestHappyTrip.git'
                            }
                         }
-                       stage("Build") {
+         stage("Build") {
                         tools{
                             jdk 'Jdk_1.8'
                             maven 'apache-maven-3.6.3'
                             }
                          steps {
-                        bat '''
+                           bat '''
                                cd happytrip-code
                                mvn clean install
                                java -version
@@ -37,7 +37,8 @@ pipeline {
 
                            '''
                        }
-                           post {
+         }
+                post {
                                success{
                                    archiveArtifact(artifacts: 'HappyTrip/Reports/*.html', allowEmptyArchive: true)
                            }
@@ -51,14 +52,13 @@ pipeline {
                         subject: "Project Build: ${env.JOB_NAME} - Failed",
                         body: "Job Failed - \"${env.JOB_NAME}\" build: ${env.BUILD_NUMBER}"
                 }
-            }
-              post {
+            
                 success {
                     emailext attachmentsPattern: '*Reports/*.html', body: '''${SCRIPT, template="groovy-html.template"}''',
                         subject: "${env.JOB_NAME} - Build # ${env.BUILD_NUMBER} - successful",
                         mimetype: 'text/html', to:"debaduttapradhan95@gmail.com"
     }
-}
+
 }
     
     
