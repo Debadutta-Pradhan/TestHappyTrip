@@ -15,15 +15,12 @@ pipeline {
                             '''
                  }
             }
-            
-            stage('Clone Source') {
+                
+                  // Build The Project              
+            stage("Build") {
                           steps {
                              git 'https://github.com/Debadutta-Pradhan/TestHappyTrip.git'
                            }
-          }
-            
-                  // Build The Project              
-            stage("Build") {
                         
                          steps {
                            bat '''
