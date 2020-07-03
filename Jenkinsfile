@@ -45,12 +45,12 @@ pipeline {
                 failure{
                     mail to: 'debaduttapradhan95@gmail.com', from: 'debaduttapradhan95@gmail.com',
                         subject: "Project Build: ${env.JOB_NAME} - Failed",
-                        body: "Job Failed - \"${env.JOB_NAME}\" build: ${env.BUILD_NUMBER}"
+                        
                 }
             
                 success {
                     emailext attachmentsPattern: '*reports/*.html', 
-                    body: '''${SCRIPT, template="groovy-html.template"}''',
+                  
                     mimeType: 'text/html', 
                     subject: "${env.JOB_NAME} - Build # ${env.BUILD_NUMBER} - successful",
                     to:"debaduttapradhan95@gmail.com"
