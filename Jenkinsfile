@@ -52,7 +52,7 @@ pipeline {
                     emailext attachmentsPattern: '*reports/*.html', 
                     body: '''${SCRIPT, template="groovy-html.template"}''',
                     mimeType: 'text/html', 
-                    subject: 'Success Pipeline: ${currentBuild.fullDisplayName}',
+                    subject: "${env.JOB_NAME} - Build # ${env.BUILD_NUMBER} - successful",
                     to:"debaduttapradhan95@gmail.com"
                         
                 }
