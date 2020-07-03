@@ -44,7 +44,7 @@ pipeline {
     post{
                 failure{
                     mail to: 'debaduttapradhan95@gmail.com', from: 'debaduttapradhan95@gmail.com',
-                        subject: "Project Build: ${env.JOB_NAME} - Failed",
+                        subject: "Project Build: ${env.JOB_NAME} - Failed"
                         
                 }
             
