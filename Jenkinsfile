@@ -22,11 +22,7 @@ pipeline {
                              git 'https://github.com/Debadutta-Pradhan/TestHappyTrip.git'
                            }
           }
-         stage("Build") {
-                        tools{
-                            jdk 'Jdk_1.8'
-                            maven 'apache-maven-3.6.3'
-                         }
+            stage("Build") {
                          steps {
                            bat '''
                                cd happytrip-code
@@ -38,11 +34,6 @@ pipeline {
                            '''
                         }
          }
-                post {
-                       success{
-                              archiveArtifact(artifacts: 'HappyTrip/Reports/*.html', allowEmptyArchive: true)
-                       }
-                }
 }
                 
     post{
