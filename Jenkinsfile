@@ -30,15 +30,16 @@ pipeline {
                            '''
                         }
             }
+        
                   post {
                        success{
                               archiveArtifacts(artifacts: 'Happytrip/reports/*.html', allowEmptyArchive: true)
                        }
                 }
-         }
+        }
             
               
-}
+
                 
     post{
                 failure{
