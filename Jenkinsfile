@@ -25,7 +25,7 @@ pipeline {
             stage("Build") {
                          steps {
                            bat '''
-                               mvn -f TestHappyTrip/pom.xml clean install
+                               mvn  clean install
                               
 
                            '''
