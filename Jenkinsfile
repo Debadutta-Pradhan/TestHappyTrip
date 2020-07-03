@@ -19,7 +19,7 @@ pipeline {
                                  
                         stage('SCM') {
                           steps {
-                             git 'https://github.com/Debadutta-Pradhan/HappyTrip4.git'
+                             git 'https://github.com/Debadutta-Pradhan/TestHappyTrip.git'
                            }
                         }
                        stage("Build") {
