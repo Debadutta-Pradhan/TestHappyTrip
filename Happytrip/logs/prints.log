@@ -1,0 +1,3 @@
+00:48:33.332 [main] DEBUG com.skillassure.happytrip.Test - Execution Started
+00:48:33.335 [main] INFO  com.skillassure.happytrip.Test - This is info level
+00:48:33.335 [main] ERROR com.skillassure.happytrip.Test - Condition Failed

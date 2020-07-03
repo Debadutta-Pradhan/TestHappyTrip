@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="8397" started-at="2020-07-03T01:16:07 IST" finished-at="2020-07-03T01:16:16 IST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="8397" started-at="2020-07-03T01:16:07 IST" finished-at="2020-07-03T01:16:16 IST">
+      <class name="com.skillassure.happytrip.tests.ExtentReport">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.skillassure.happytrip.tests.ExtentReport@e320068]" name="setup" is-config="true" duration-ms="158" started-at="2020-07-03T01:16:07 IST" finished-at="2020-07-03T01:16:07 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="setUpTest()[pri:0, instance:com.skillassure.happytrip.tests.ExtentReport@e320068]" name="setUpTest" is-config="true" duration-ms="4018" started-at="2020-07-03T01:16:07 IST" finished-at="2020-07-03T01:16:11 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpTest -->
+        <test-method status="PASS" signature="adminlogintest()[pri:0, instance:com.skillassure.happytrip.tests.ExtentReport@e320068]" name="adminlogintest" duration-ms="3661" started-at="2020-07-03T01:16:11 IST" finished-at="2020-07-03T01:16:15 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- adminlogintest -->
+        <test-method status="PASS" signature="tearDownTest()[pri:0, instance:com.skillassure.happytrip.tests.ExtentReport@e320068]" name="tearDownTest" is-config="true" duration-ms="691" started-at="2020-07-03T01:16:15 IST" finished-at="2020-07-03T01:16:16 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.skillassure.happytrip.tests.ExtentReport@e320068]" name="tearDown" is-config="true" duration-ms="50" started-at="2020-07-03T01:16:16 IST" finished-at="2020-07-03T01:16:16 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.skillassure.happytrip.tests.ExtentReport -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
