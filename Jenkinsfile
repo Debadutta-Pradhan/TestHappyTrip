@@ -33,7 +33,7 @@ pipeline {
                         }
                   post {
                        success{
-                              archiveArtifact(artifacts: 'HappyTrip/reports/*.html', allowEmptyArchive: true)
+                              archiveArtifacts(artifacts: 'HappyTrip/reports/*.html', allowEmptyArchive: true)
                        }
                 }
          }
