@@ -18,11 +18,9 @@ pipeline {
                 
                   // Build The Project              
             stage('Build') {
-                          steps {
-                             git 'https://github.com/Debadutta-Pradhan/TestHappyTrip.git'
-                           }
-                        
+                
                          steps {
+                             git 'https://github.com/Debadutta-Pradhan/TestHappyTrip.git'
                            bat '''
                             cd Happytrip
                             mvn clean install
