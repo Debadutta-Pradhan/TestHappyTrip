@@ -32,7 +32,7 @@ pipeline {
                                     alwaysLinkToLastBuild: false,
                                     keepAll: true,
                                     reportDir: 'coverage',
-                                    reportFiles: 'index.html',
+                                    reportFiles: 'happytrip_admin.html',
                                     reportName: 'RCov Report'
                                   ]
                               }
