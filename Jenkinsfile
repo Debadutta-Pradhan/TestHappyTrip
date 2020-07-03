@@ -43,11 +43,7 @@ pipeline {
                                success{
                                    archiveArtifact(artifacts: 'HappyTrip/Reports/*.html', allowEmptyArchive: true)
                            }
-                       }
-                     }
-             
-        }
-            post{
+                 
                 failure{
                     mail to: 'debaduttapradhan95@gmail.com', from: 'debaduttapradhan95@gmail.com',
                         subject: "Project Build: ${env.JOB_NAME} - Failed",
@@ -60,6 +56,8 @@ pipeline {
                         mimetype: 'text/html', to:"debaduttapradhan95@gmail.com"
     }
 
+}
+    
 }
     
     
