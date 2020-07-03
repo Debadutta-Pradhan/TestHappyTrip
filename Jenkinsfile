@@ -17,7 +17,7 @@ pipeline {
             }
             
                   // Build The Project              
-            stage("Build") {
+            stage('Build') {
                          steps {
                              git 'https://github.com/Debadutta-Pradhan/TestHappyTrip.git'
                            }
