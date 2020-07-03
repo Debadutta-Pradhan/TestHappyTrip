@@ -37,7 +37,8 @@ pipeline {
 
                            '''
                        }
-         }
+           }
+        }
                 post {
                                success{
                                    archiveArtifact(artifacts: 'HappyTrip/Reports/*.html', allowEmptyArchive: true)
