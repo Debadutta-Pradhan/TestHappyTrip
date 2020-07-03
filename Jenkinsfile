@@ -57,9 +57,8 @@ pipeline {
                     to:"debaduttapradhan95@gmail.com"
                         
                 }
-
-        }
-    
+        }   
+}
 }
     
     
