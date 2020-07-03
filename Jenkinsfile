@@ -26,7 +26,7 @@ pipeline {
                          steps {
                            bat '''
                             cd Happytrip
-                            mvn Happytrip/pom.xml clean install
+                            mvn clean install
                               
 
                            '''
