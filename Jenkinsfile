@@ -33,13 +33,14 @@ pipeline {
 
                            '''
                         }
-         }
-            
-                post {
+                  post {
                        success{
                               archiveArtifact(artifacts: 'HappyTrip/Reports/*.html', allowEmptyArchive: true)
                        }
                 }
+         }
+            
+              
 }
                 
     post{
