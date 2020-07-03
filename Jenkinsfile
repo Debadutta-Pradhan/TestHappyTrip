@@ -26,7 +26,7 @@ pipeline {
                          steps {
                            bat '''
                                cd TestHappyTrip
-                               mvn clean install
+                               mvn -f TestHappyTrip/pom.xml clean install
                                java -version
                                mvn -version
                                mvn clean package
