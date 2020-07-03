@@ -15,29 +15,30 @@ pipeline {
                             '''
                     }
                 }
-               stage ('Build') { 
-                              steps {
-                                // install required gems
-                                sh 'bundle install'
-
-                                // build and run tests with coverage
-                                sh 'bundle exec rake build spec'
-
-                                // Archive the built artifacts
-                                archive includes: 'pkg/*.gem'
-
-                                // publish html
-                                publishHTML target: [
-                                    allowMissing: false,
-                                    alwaysLinkToLastBuild: false,
-                                    keepAll: true,
-                                    reportDir: 'coverage',
-                                    reportFiles: 'happytrip_admin.html',
-                                    reportName: 'RCov Report'
-                                  ]
-                              }
-                            }
             
+                                 
+                        stage('SCM') {
+                          steps {
+                             git 'https://github.com/Debadutta-Pradhan/HappyTrip4.git'
+                           }
+                        }
+                       stage("Build") {
+                        tools{
+                            jdk 'Jdk_1.8'
+                            maven 'apache-maven-3.6.3'
+                            }
+                         steps {
+                        bat '''
+                               cd happytrip-code
+                               mvn clean install
+                               java -version
+                               mvn -version
+                               mvn clean package
+
+                           '''
+                       }
+                       }
+              
              
         }
 }
