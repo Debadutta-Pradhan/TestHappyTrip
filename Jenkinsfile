@@ -16,8 +16,8 @@ pipeline {
                     }
                 }
             
-                                 
-                        stage('SCM') {
+                  // Build The Project              
+                        stage('Clone Source') {
                           steps {
                              git 'https://github.com/Debadutta-Pradhan/TestHappyTrip.git'
                            }
@@ -37,8 +37,28 @@ pipeline {
 
                            '''
                        }
+                           post {
+                               success{
+                                   archiveArtifact(artifacts: 'HappyTrip/Reports/*.html', allowEmptyArchive: true)
+                           }
                        }
-              
+                     }
              
         }
+            post{
+                failure{
+                    mail to: 'debaduttapradhan95@gmail.com', from: 'debaduttapradhan95@gmail.com',
+                        subject: "Project Build: ${env,JOB_NAME} - Failed",
+                        body: "Job Failed - \"${env.JOB_NAME}"\ build: ${env.BUILD_NUMBER}"
+                }
+            }
+              post {
+                success {
+                    emailext attachmentsPattern: '*Reports/*.html', body: '''${SCRIPT, template="groovy-html.template"}''',
+                        subject: "${env.JOB_NAME} - Build # ${env.BUILD_NUMBER} - successful",
+                        mimetype: 'text/html', to:"debaduttapradhan95@gmail.com"
+    }
 }
+}
+    
+    
